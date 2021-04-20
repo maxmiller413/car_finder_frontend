@@ -10,24 +10,33 @@ function NavBar({
     setCurrentUser
 }) {
 
-    function logout(){
-        setCurrentUser(null)
-    }
+    
 
 return (
     <header> 
         <h1> {title} </h1> 
-        <nav className="nav"> 
-            <Link to="/signup">Signup</Link>
-            <Link to="/login">Login</Link>
-            <Link to="/"> Home </Link>
-            <Link to="/wishlist"> Wishlist </Link>
-            <button onClick={logout}>Logout</button>
+        <div> 
+            <Link to="/"> Home </Link> 
+        </div>
+
+        <div > 
+            {currentUser ? (
+                <>
+                    <Link to="/wishlist"> Wishlist </Link>
+                    <button onClick={() => setCurrentUser(null)}>Logout</ button>
+                </>
+            ) : (
+                <>
+                    <Link to="/signup">Signup</Link>
+                    <Link to="/login">Login</Link>
+                </>
+            )}
+            
 
         <button onClick={() => onToggleDarkMode()}>
             {isDarkMode ? "Dark" : "Light"} Mode
         </button>
-        </nav>
+        </div>
     </header>
 )}
 

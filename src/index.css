@@ -33,3 +33,15 @@ ul {
   list-style: none;
 }
 
+/* header a,
+header button {
+  font-size: 1rem;
+  display: inline-block;
+  background-color: #fff8e7;
+  border: 1px solid salmon;
+  margin: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: salmon;
+  cursor: pointer;
+} */

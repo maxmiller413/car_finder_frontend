@@ -19,17 +19,22 @@ function SignUp ({ setCurrentUser }) {
     }
 
     function handleSubmit(e){
-        e.prevent.default()
+        e.preventDefault()
         // TODO: sign up as a new user
         // request => POST /signup
-        // fetch("http://localhost:3000/signup", {
-        //     method: "POST",
-        //     headers: {
-        //     "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(formData),
-        // })
-        //     .then((response) => {
+         
+        fetch("http://localhost:3000/signup", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(r => r.json())
+            .then(data => {
+                console.log(data)
+            })
+            // .then((response) => {
         //         if (response.ok) {
         //             return response.json();
         //         } else {
@@ -76,7 +81,7 @@ function SignUp ({ setCurrentUser }) {
         <label>Favorite Make</label>
         <input
             type="text"
-            name="username"
+            name="fav_make"
             value={fav_make}
             onChange={handleChange}
         />
@@ -84,7 +89,7 @@ function SignUp ({ setCurrentUser }) {
         <label>Favorite Model</label>
         <input
             type="text"
-            name="username"
+            name="fav_model"
             value={fav_model}
             onChange={handleChange}
         />

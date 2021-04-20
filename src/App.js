@@ -15,7 +15,21 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-console.log(currentUser)
+  console.log(currentUser)
+// auto-login 
+// TODO: check if a user has already logged in (look for their token)
+//  if they've already logged in, use that token to log them in again
+// request => GET /me
+
+  useEffect(() => {
+    const token = true
+    if (token) {
+    fetch("http://localhost:3000/me")
+    .then(r => r.json())
+    // response => setCurrentUser
+    .then(user => setCurrentUser(null))
+    }
+  }, [])
 
   useEffect(() => {
     fetch(cars_url)
@@ -27,7 +41,6 @@ console.log(currentUser)
     setIsDarkMode(isDarkMode => !isDarkMode)
   }
 
-  
   return (
     <div className={isDarkMode ? "App" : "App light"} >
       <NavBar 
