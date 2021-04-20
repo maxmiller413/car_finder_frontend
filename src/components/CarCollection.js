@@ -1,5 +1,7 @@
 import React from "react"
 import CarCard from "./CarCard"
+import Filter from "./Filter"
+import WishlistNames from "./WishlistNames"
 
 
 function CarCollection({ cars }){
@@ -11,9 +13,13 @@ function CarCollection({ cars }){
         />
     ))
     return(
-        <ul>
-            {carsArr}
-        </ul>
+        <>
+            <Filter />
+            <WishlistNames />
+            <ul>
+                <div>{carsArr}</div>
+            </ul>
+        </>
     )
 }
 

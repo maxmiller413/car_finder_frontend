@@ -2,9 +2,10 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App.light {
+  --color: var(--black);
+  --background: var(--white);
+  --primary: var(--mid-turquoise);
 }
 
 @media (prefers-reduced-motion: no-preference) {

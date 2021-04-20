@@ -3,34 +3,26 @@ import React from "react"
 
 function CarCard({ car }) {
 
-const { id, vehicle_type, make, model, year, price, average_vehicle_rating, wishlist, image } = car
+const { id, vehicle_type, make, model, year, price, average_vehicle_rating, image } = car
 
 return(
     <li >
       <div >
+        <h4> Make: {make} </h4>
+        <h5> Model: {model} </h5>
         <img src={image} alt={model} />
-        <button  >
-          👏
-        </button>
       </div>
 
       <div >
-        <h4>{model}</h4>
-        <p>{price}</p>
+        <p> Price: {price} </p>
+        <p> Year: {year} </p>
         <p>
-          <em>Add a link to the detail page here</em>
+          <em> Add a link to the detail page here </em>
         </p>
       </div>
-
-      <div >
-        <span >
-            Phase {make}
-        </span>
-      </div>
     </li>
-)
-    
-    
+  )
+  
 }
 
 export default CarCard
