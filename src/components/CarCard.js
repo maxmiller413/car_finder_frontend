@@ -1,36 +1,42 @@
-import React from "react"
+import React from "react";
+import { useHistory } from "react-router-dom";
 
 
 function CarCard({ car }) {
 
 const { id, vehicle_type, make, model, year, price, average_vehicle_rating, wishlist, image } = car
-
-return(
-    <li >
-      <div >
-        <img src={image} alt={model} />
-        <button  >
-          👏
-        </button>
-      </div>
-
-      <div >
-        <h4>{model}</h4>
-        <p>{price}</p>
-        <p>
-          <em>Add a link to the detail page here</em>
-        </p>
-      </div>
-
-      <div >
-        <span >
-            Phase {make}
-        </span>
-      </div>
-    </li>
-)
-    
-    
+const history = useHistory()
+const add_to_wishlist = (id) => {
+  fetch("http://localhost:3000/wishlists",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      wishlist: {
+        car_id: id,
+        user_id: 2,
+        name: "dream"
+      }
+    })
+  })
+  history.push('/wishlist')
 }
 
-export default CarCard
+  return (
+    <div className="card">
+      <img src={image} alt={make} />
+      <div className="container">
+        <h4><b>{make} {model}</b></h4>
+        <p>{year} & {price}</p>
+        <button id={id} onClick={(e) => add_to_wishlist(e.target.id)}>
+        ☆ wishlist
+        </button>
+      </div>
+    </div>
+  )
+
+}
+
+export default CarCard;

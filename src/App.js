@@ -3,10 +3,11 @@ import React, { useState, useEffect } from "react"
 import { Switch, Route } from "react-router-dom";
 import CarCollection from "./components/CarCollection"
 import NavBar from "./components/NavBar"
-import WishlistNames from "./components/WishlistNames"
-import WishlistDetails from "./components/WishlistDetails"
+import WishlistCollection from "./components/WishlistCollection"
+import WishlistItem from "./components/WishlistItem"
 import SignUp from "./components/SignUp"
 import Login from "./components/Login"
+import WishlistNames from './components/WishlistItem';
 
 
 
@@ -32,13 +33,13 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/wishlist">
-          <WishlistDetails />
+          <WishlistCollection />
         </Route>
         <Route exact path="/">
             <CarCollection cars={cars} />
         </Route>
       </Switch>
-      <WishlistNames />
+      {/* <WishlistItem /> */}
     </div>
   );
 }

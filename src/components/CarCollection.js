@@ -2,7 +2,9 @@ import React from "react"
 import CarCard from "./CarCard"
 
 
-function CarCollection({ cars }){
+
+
+function CarCollection({ cars }) {
 
     const carsArr = cars.map(car => (
         <CarCard 
@@ -10,10 +12,11 @@ function CarCollection({ cars }){
             car={car}
         />
     ))
+
     return(
-        <ul>
+        <div className="carCollection">
             {carsArr}
-        </ul>
+        </div>
     )
 }
 
