@@ -5,6 +5,8 @@ function NavBar() {
     return (
         <div> 
             NavBar 
+            <Link to="/signup">Signup</Link>
+            <Link to="/login">Login</Link>
             <Link to="/"> Home </Link>
             <Link to="/wishlist"> Wishlist </Link>
         </div>
