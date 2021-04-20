@@ -9,8 +9,10 @@ function SignUp ({ setCurrentUser }) {
         fav_make: "",
         fav_model: "",
     });
-    const [errors, setErrors] = useState([]);
-    const history = useHistory();
+    const [errors, setErrors] = useState([])
+    const history = useHistory()
+
+    console.log(errors)
 
     const { username, fav_model, fav_make, password } = formData;
 
@@ -31,8 +33,13 @@ function SignUp ({ setCurrentUser }) {
             body: JSON.stringify(formData)
         })
             .then(r => r.json())
-            .then(data => {
-                console.log(data)
+            .then((data) => {
+                if (data.errors) {
+                    setErrors(data.errors)
+                } else {
+                    setCurrentUser(data)
+                    history.push("/")
+                }
             })
             // .then((response) => {
         //         if (response.ok) {
