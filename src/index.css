@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* NavBar header */
+header h1 {
+  margin: 0;
+  cursor: pointer;
+}
+
+header h1 a {
+  border-bottom: none;
+}
+
+header h1 a:hover {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+/* CarCollection UL */
+ul {
+  list-style-type: none;
+  list-style: none;
+}
+
