@@ -22,13 +22,12 @@ function App() {
 // request => GET /me
 
   useEffect(() => {
-    const token = true
-    if (token) {
+    const token = null
+    if (token)
     fetch("http://localhost:3000/me")
     .then(r => r.json())
     // response => setCurrentUser
-    .then(user => setCurrentUser(null))
-    }
+    .then(user => setCurrentUser(user))
   }, [])
 
   useEffect(() => {
@@ -41,6 +40,7 @@ function App() {
     setIsDarkMode(isDarkMode => !isDarkMode)
   }
 
+  
   return (
     <div className={isDarkMode ? "App" : "App light"} >
       <NavBar 

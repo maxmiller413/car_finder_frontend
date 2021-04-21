@@ -25,10 +25,14 @@ function Login ({ setCurrentUser }) {
         body: JSON.stringify(formData),
     })
         .then(r => r.json())
-        .then(user => {
-            setCurrentUser(user)
-            history.push("/")
-        })
+        .then((data) => {
+          if (data.errors) {
+              setErrors(data.errors)
+          } else {
+              setCurrentUser(data)
+              history.push("/")
+          }
+      })
 
     //     .then((response) => {
     //     if (response.ok) {
