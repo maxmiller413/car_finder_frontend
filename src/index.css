@@ -7,6 +7,18 @@
   --mainYellow:#e3b505;
 }
 
+.App {
+  color: var(--color);
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+.App.light {
+  --color: var(--black);
+  --background: var(--white);
+  --primary: var(--mid-turquoise);
+}
+
 body{
   font-family: 'Roboto', sans-serif;
   color: var(--mainBlack);

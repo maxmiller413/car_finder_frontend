@@ -33,6 +33,7 @@ function App() {
     // response => setCurrentUser
     .then(user => setCurrentUser(user))
     }
+    
   }, [])
 
   useEffect(() => {
