@@ -7,7 +7,7 @@ import WishlistCollection from "./components/WishlistCollection"
 import WishlistItem from "./components/WishlistItem"
 import SignUp from "./components/SignUp"
 import Login from "./components/Login"
-import WishlistNames from './components/WishlistItem';
+// import Wishlist from './components/WishlistItem';
 
 
 
@@ -15,6 +15,24 @@ const cars_url = "http://localhost:3000/cars"
 function App() {
 
   const [cars, setCars] = useState([])
+  const [currentUser, setCurrentUser] = useState(null)
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  console.log(currentUser)
+// auto-login 
+// TODO: check if a user has already logged in (look for their token)
+//  if they've already logged in, use that token to log them in again
+// request => GET /me
+
+  useEffect(() => {
+    const token = true
+    if (token) {
+    fetch("http://localhost:3000/me")
+    .then(r => r.json())
+    // response => setCurrentUser
+    .then(user => setCurrentUser(null))
+    }
+  }, [])
 
   useEffect(() => {
     fetch(cars_url)
@@ -22,21 +40,37 @@ function App() {
     .then((data) => setCars(data))
   }, [])
 
+  function handleToggleDarkMode(){
+    setIsDarkMode(isDarkMode => !isDarkMode)
+  }
+
   return (
-    <div >
-      <NavBar />
+    <div className={isDarkMode ? "App" : "App light"} >
+      <NavBar 
+        title="Car Finder"
+        isDarkMode={isDarkMode}
+        onToggleDarkMode={handleToggleDarkMode}
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
+      />
       <Switch>
         <Route exact path="/signup">
-          <SignUp />
+          <SignUp setCurrentUser={setCurrentUser} />
         </Route>
         <Route exact path="/login">
-          <Login />
+          <Login setCurrentUser={setCurrentUser} />
         </Route>
         <Route exact path="/wishlist">
           <WishlistCollection />
         </Route>
         <Route exact path="/">
-            <CarCollection cars={cars} />
+            {currentUser ? 
+              (<> 
+                <h1> Welcome, {currentUser.username} </h1>
+                <CarCollection cars={cars} /> 
+              </>) 
+              : 
+              (<h1> Please Login or SignUp </h1>)}
         </Route>
       </Switch>
       {/* <WishlistItem /> */}

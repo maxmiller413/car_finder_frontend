@@ -16,7 +16,7 @@ const add_to_wishlist = (id) => {
     body: JSON.stringify({
       wishlist: {
         car_id: id,
-        user_id: 2,
+        user_id: id,
         name: "dream"
       }
     })

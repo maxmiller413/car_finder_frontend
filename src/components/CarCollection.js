@@ -1,5 +1,7 @@
 import React from "react"
 import CarCard from "./CarCard"
+import Filter from "./Filter"
+// import WishlistNames from "./WishlistNames"
 
 
 
@@ -7,7 +9,7 @@ import CarCard from "./CarCard"
 function CarCollection({ cars }) {
 
     const carsArr = cars.map(car => (
-        <CarCard 
+        <CarCard
             key={car.id}
             car={car}
         />

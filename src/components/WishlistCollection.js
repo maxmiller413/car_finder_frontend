@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from "react"
 import WishlistItem from "./WishlistItem"
 
-function WishlistDetails(){
+function WishlistCollection(){
     const [wishlists, setWishlists] = useState([])
 
 
     useEffect(() => {
         fetch("http://localhost:3000/wishlists")
         .then((r) => r.json())
-        .then((data) => setWishlists(data))
+        .then((data) => console.log(data))
     }, [])
 
     const wishlistsArr = wishlists.map(wishlist => (
@@ -23,4 +23,4 @@ function WishlistDetails(){
     )
 }
 
-export default WishlistDetails
+export default WishlistCollection
