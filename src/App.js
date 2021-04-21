@@ -17,9 +17,10 @@ function App() {
 
   const [cars, setCars] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [wishlists, setWishlists] = useState([])
 
-  console.log(currentUser)
+  // console.log(currentUser)
 // auto-login 
 // TODO: check if a user has already logged in (look for their token)
 //  if they've already logged in, use that token to log them in again
@@ -63,7 +64,11 @@ function App() {
           <Login setCurrentUser={setCurrentUser} />
         </Route>
         <Route exact path="/wishlist">
-          <WishlistCollection />
+          <WishlistCollection 
+            currentUser={currentUser}
+            wishlists={wishlists}
+            setWishlists={setWishlists}
+          />
         </Route>
         <Route exact path="/">
             {currentUser ? 

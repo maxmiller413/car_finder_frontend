@@ -1,21 +1,26 @@
 import React, {useState, useEffect} from "react"
 import WishlistItem from "./WishlistItem"
 
-function WishlistCollection(){
-    const [wishlists, setWishlists] = useState([])
+function WishlistCollection({ wishlists, setWishlists, currentUser}){
+    
 
 
     useEffect(() => {
         fetch("http://localhost:3000/wishlists")
         .then((r) => r.json())
-        .then((data) => console.log(data))
+        .then((data) => setWishlists(data))
     }, [])
 
-    const wishlistsArr = wishlists.map(wishlist => (
-        <WishlistItem
-            key={wishlist.id}
-            wishlist={wishlist}
-        />
+    const wishlistsArr = wishlists
+        // .filter(wishlist => (
+        //     wishlist.user.username === currentUser
+        // ))
+        .map(wishlist => (
+            <WishlistItem
+                key={wishlist.id}
+                wishlist={wishlist}
+                currentUser={currentUser}
+            />
     ))
 
     return(
