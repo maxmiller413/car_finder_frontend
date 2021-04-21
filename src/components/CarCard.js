@@ -28,8 +28,10 @@ const add_to_wishlist = (id) => {
     <div className="card">
       <img src={image} alt={make} />
       <div className="container">
-        <h4><b>{make} {model}</b></h4>
-        <p>{year} & {price}</p>
+        <h4><b>{make}</b></h4>
+        <h4><b>{model}</b></h4>
+        <p>Year: {year}</p>
+         <p>Price: {price}</p>
         <button id={id} onClick={(e) => add_to_wishlist(e.target.id)}>
         ☆ wishlist
         </button>
