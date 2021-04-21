@@ -1,6 +1,7 @@
 import '../index.css';
 import React from "react"
 import { Link } from "react-router-dom";
+import DarkMode from './Darkmode'
 
 function NavBar({ 
     title,
@@ -15,27 +16,25 @@ function NavBar({
 return (
     <header> 
         <h1> {title} </h1> 
-        <div> 
-            <Link to="/"> Home </Link> 
-        </div>
-
-        <div > 
+        <ul className="navbar-home">
+            <li><Link to="/"> Home </Link></li>
             {currentUser ? (
                 <>
-                    <Link to="/wishlist"> Wishlist </Link>
-                    <button onClick={() => setCurrentUser(null)}>Logout</ button>
+                    <li><Link to="/wishlist"> Wishlist </Link></li>
+                    <li><Link onClick={() => setCurrentUser(null)}>Logout</ Link></li>
                 </>
             ) : (
                 <>
-                    <Link to="/signup">Signup</Link>
-                    <Link to="/login">Login</Link>
+                    <li><Link to="/signup">Signup</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                 </>
             )}
+        </ul>
+        <div>
             
-
-        <button onClick={() => onToggleDarkMode()}>
-            {isDarkMode ? "Dark" : "Light"} Mode
-        </button>
+        
+            <DarkMode isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode}>
+            </DarkMode>
         </div>
     </header>
 )}

@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from "react"
 import { Switch, Route } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import CarCollection from "./components/CarCollection"
 import NavBar from "./components/NavBar"
 import WishlistCollection from "./components/WishlistCollection"
@@ -16,9 +17,10 @@ function App() {
 
   const [cars, setCars] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true)
+  const [wishlists, setWishlists] = useState([])
 
-  console.log(currentUser)
+  // console.log(currentUser)
 // auto-login 
 // TODO: check if a user has already logged in (look for their token)
 //  if they've already logged in, use that token to log them in again
@@ -30,8 +32,9 @@ function App() {
     fetch("http://localhost:3000/me")
     .then(r => r.json())
     // response => setCurrentUser
-    .then(user => setCurrentUser(null))
+    .then(user => setCurrentUser(user))
     }
+    
   }, [])
 
   useEffect(() => {
@@ -61,7 +64,11 @@ function App() {
           <Login setCurrentUser={setCurrentUser} />
         </Route>
         <Route exact path="/wishlist">
-          <WishlistCollection />
+          <WishlistCollection 
+            currentUser={currentUser}
+            wishlists={wishlists}
+            setWishlists={setWishlists}
+          />
         </Route>
         <Route exact path="/">
             {currentUser ? 

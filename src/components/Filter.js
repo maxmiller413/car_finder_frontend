@@ -1,8 +1,127 @@
-import React from "react"
+import React, { useState } from "react"
 
-function Filter() {
+function Filter({ 
+    type, 
+    setType,
+    make,
+    setMake,
+    model,
+    setModel,
+    maxPrice,
+    setMaxPrice,
+    avgVehicleRating,
+    setAvgVehicleRating
+}) {
+    
     return(
-        <div> Filter </div>
+        <div className="bg-img">
+            <div className="content">
+                <header>Vehicle Type</header>
+                <div className="text-left">
+                <select
+                    name="vehicle_type"
+                    id="vehicle_type"
+                    value={type}
+                    onChange={(event) => setType(event.target.value)}
+                >
+                    <option value="All" > All </option>
+                    <option value="Convertible" > Convertible </option>
+                    <option value="Sedan" > Sedan </option>
+                    <option value="SUV" > SUV </option>
+                    
+                </select>
+                <label className="white">Make</label>
+                <select
+                    name="make"
+                    id="make"
+                    value={make}
+                    onChange={(event) => setMake(event.target.value)}
+                >
+                    <option value="All" > All </option>
+                    <option value="Audi" > Audi </option>
+                    <option value="BMW" > BMW </option>
+                    <option value="Mercedes-Benz" > Mercedes-Benz </option>
+                    <option value="Porsche" > Porsche </option>
+                </select>
+                <label className="white">Model</label>
+                <select
+                    name="make"
+                    id="make"
+                    value={model}
+                    onChange={(event) => setModel(event.target.value)}
+                >
+                    <option value="All" > All </option>
+                    <option value="A7" > A7 </option>
+                    <option value="RS 7" > RS 7 </option>
+                    <option value="RS Q8" > RS Q8 </option>
+                    <option value="R8" > R8 </option>
+                    <option value="Q3" > Q3 </option>
+                    <option value="G-Class" > G-Class </option>
+                    <option value="S-Class" > S-Class </option>
+                    <option value="E-Class" > E-Class </option>
+                    <option value="GLS" > GLS </option>
+                    <option value="SL Roadster" > SL Roadster </option>
+                    <option value="911" > 911 </option>
+                    <option value="718" > 718 </option>
+                    <option value="Panamera" > Panamera </option>
+                    <option value="Macan" > Macan </option>
+                    <option value="Cayenne" > Cayenne </option>
+                    <option value="X7" > X7 </option>
+                    <option value="Z4" > Z4 </option>
+                    <option value="X2" > X2 </option>
+                    <option value="8 series" > 8 series </option>
+                    <option value="7 series" > 7 series </option>
+                    </select>
+                    <label className="white">Max Price</label>
+                    <select
+                        name="max price"
+                        id="max price"
+                        value={maxPrice}
+                        onChange={(event) => setMaxPrice(event.target.value)}
+                    >
+                        <option value="No Max Price" > No Max Price </option>
+                        <option value="2000" > 2000 </option>
+                        <option value="4000" > 4000 </option>
+                        <option value="6000" > 6000 </option>
+                        <option value="8000" > 8000 </option>
+                        <option value="10000" > 10000 </option>
+                        <option value="15000" > 15000 </option>
+                        <option value="20000" > 20000 </option>
+                        <option value="25000" > 25000 </option>
+                        <option value="30000" > 30000 </option>
+                        <option value="35000" > 35000 </option>
+                        <option value="40000" > 40000 </option>
+                        <option value="45000" > 45000 </option>
+                        <option value="50000" > 50000 </option>
+                        <option value="60000" > 60000 </option>
+                        <option value="70000" > 70000 </option>
+                        <option value="80000" > 80000 </option>
+                        <option value="90000" > 90000 </option>
+                        <option value="100000" > 100000 </option>
+                        <option value="110000" > 110000 </option>
+                        <option value="120000" > 120000 </option>
+                        <option value="130000" > 130000 </option>
+                        <option value="140000" > 140000 </option>
+                        <option value="150000" > 150000 </option>
+
+                    </select>
+                    <label className="white">Average Vehicle Rating</label>
+                    <select
+                        name="average-vehicle-rating"
+                        id="average-vehicle-rating"
+                        value={avgVehicleRating}
+                        onChange={(event) => setAvgVehicleRating(event.target.value)}
+                    >
+                        <option value="All" > All </option>
+                        <option value="1" > 1 </option>
+                        <option value="2" > 2 </option>
+                        <option value="3" > 3 </option>
+                        <option value="4" > 4 </option>
+                        <option value="5" > 5 </option>
+                    </select>
+                </div>
+            </div>
+        </div>
     )
 }
 
