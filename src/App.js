@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from "react"
 import { Switch, Route } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import CarCollection from "./components/CarCollection"
 import NavBar from "./components/NavBar"
 import WishlistCollection from "./components/WishlistCollection"
@@ -30,7 +31,7 @@ function App() {
     fetch("http://localhost:3000/me")
     .then(r => r.json())
     // response => setCurrentUser
-    .then(user => setCurrentUser(null))
+    .then(user => setCurrentUser(user))
     }
   }, [])
 
