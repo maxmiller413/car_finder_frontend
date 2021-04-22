@@ -3,7 +3,7 @@ import CarCard from "./CarCard"
 import Filter from "./Filter"
 // import WishlistNames from "./WishlistNames"
 
-function CarCollection({ cars }) {
+function CarCollection({ cars, onAddWishlist, currentUser }) {
 
     const [type, setType] = useState("All");
     const [make, setMake] = useState("All");
@@ -31,6 +31,8 @@ function CarCollection({ cars }) {
         <CarCard
             key={car.id}
             car={car}
+            onAddWishlist={onAddWishlist}
+            currentUser={currentUser}
         />
     ))
 

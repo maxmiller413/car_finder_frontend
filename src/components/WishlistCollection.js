@@ -6,13 +6,13 @@ function WishlistCollection({ wishlists, setWishlists, currentUser, handleUpdate
 
     const [updateWishlist, setUpdateWishlist] = useState("All")
 
-    useEffect(() => {
-        fetch(`http://localhost:3000/users/${currentUser.id}`)
-        .then((r) => r.json())
-        .then((data) => setWishlists(data.wishlists))
-    }, [])
+    // useEffect(() => {
+    //     fetch(`http://localhost:3000/users/${currentUser.id}`)
+    //     .then((r) => r.json())
+    //     .then((data) => setWishlists(data.wishlists))
+    // }, [])
 
-    function handleDeletePlant(id){
+    function handleDeleteWishlist(id){
         const updatedWishlistsArr = wishlists.filter(wishlist => (
             wishlist.id !== id
         ))
@@ -25,7 +25,7 @@ function WishlistCollection({ wishlists, setWishlists, currentUser, handleUpdate
                 key={wishlist.id}
                 wishlist={wishlist}
                 currentUser={currentUser}
-                onDeleteWishlistItem={handleDeletePlant}
+                onDeleteWishlistItem={handleDeleteWishlist}
                 handleUpdateWishlist={handleUpdateWishlist}
             />
         )

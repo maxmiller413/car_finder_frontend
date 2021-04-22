@@ -22,8 +22,8 @@ function WishlistForm({ handleUpdateWishlist, wishlist }){
         <form onSubmit={handleSubmit} className="form" autoComplete="off" >
             <h3>Update Wishlist Category</h3>
             <select
-                name="wishlist_name"
-                id="wishlistname"
+                // name="wishlist_name"
+                // id="wishlistname"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
             >

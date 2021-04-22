@@ -33,6 +33,14 @@ function App() {
 
   }
 
+
+  function handleAddWishlist(newWishlist){
+    console.log("new Item", newWishlist)
+    console.log("full List", wishlists)
+    const updatedWishlistsArr = [...wishlists, newWishlist]
+    setWishlists(updatedWishlistsArr)
+  }
+
   // console.log(currentUser)
 // auto-login 
 // TODO: check if a user has already logged in (look for their token)
@@ -50,6 +58,15 @@ function App() {
     }
     
   }, [])
+
+  useEffect(() => {
+    const userId = localStorage.getItem("userId")
+    if (userId){
+      fetch(`http://localhost:3000/users/${userId}`)
+      .then((r) => r.json())
+      .then((data) => setWishlists(data.wishlists))
+    } 
+}, [])
 
   useEffect(() => {
     fetch(cars_url)
@@ -89,7 +106,7 @@ function App() {
             {currentUser ? 
               (<> 
                 <h1 className="letter"> Welcome, {currentUser.username} </h1>
-                <CarCollection cars={cars} /> 
+                <CarCollection cars={cars} onAddWishlist={handleAddWishlist} currentUser={currentUser} /> 
               </>) 
               : 
               (<h1 className="letter"> Please Login or SignUp </h1>)}
