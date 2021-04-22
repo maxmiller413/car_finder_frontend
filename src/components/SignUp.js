@@ -37,6 +37,7 @@ function SignUp ({ setCurrentUser }) {
                 if (data.errors) {
                     setErrors(data.errors)
                 } else {
+                    localStorage.setItem("userId", data.id)
                     setCurrentUser(data)
                     history.push("/")
                 }

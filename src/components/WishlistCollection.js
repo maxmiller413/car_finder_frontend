@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import WishlistItem from "./WishlistItem"
 
 
-function WishlistCollection({ wishlists, setWishlists, currentUser}){
+function WishlistCollection({ wishlists, setWishlists, currentUser, handleUpdateWishlist }){
 
     const [updateWishlist, setUpdateWishlist] = useState("All")
 
@@ -26,6 +26,7 @@ function WishlistCollection({ wishlists, setWishlists, currentUser}){
                 wishlist={wishlist}
                 currentUser={currentUser}
                 onDeleteWishlistItem={handleDeletePlant}
+                handleUpdateWishlist={handleUpdateWishlist}
             />
         )
     )

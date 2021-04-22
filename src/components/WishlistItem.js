@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import WishlistForm from "./WishlistForm"
 
-function WishlistItem({ wishlist, onDeleteWishlistItem }) {
-    const [updateWishlist, setUpdateWishlist] = useState("All")
+function WishlistItem({ wishlist, onDeleteWishlistItem, handleUpdateWishlist }) {
+    // const [updateWishlist, setUpdateWishlist] = useState("All")
     
 
 
@@ -15,17 +15,17 @@ function WishlistItem({ wishlist, onDeleteWishlistItem }) {
         onDeleteWishlistItem(wishlist.id)
     }
 
-    function handleUpdateWishlistName(updatedWish){
+    // function handleUpdateWishlistName(updatedWish){
         
-            if(wishlist.id === updatedWish.id){
-                return (updatedWish)
-            }
-            else {
-                return (wishlist)
-            }
+    //         if(wishlist.id === updatedWish.id){
+    //             return (updatedWish)
+    //         }
+    //         else {
+    //             return (wishlist)
+    //         }
         
-        setUpdateWishlist(updatedWish)
-    }
+    //     setUpdateWishlist(updatedWish)
+    // }
 
     return(
         
@@ -39,7 +39,7 @@ function WishlistItem({ wishlist, onDeleteWishlistItem }) {
             <p>Type: {wishlist.car.vehicle_type}</p>
             <p>Average Rating: {wishlist.car.average_vehicle_rating}</p>
         <div>
-            <WishlistForm wishlist={wishlist} onUpdateWishlist={handleUpdateWishlistName} />
+            <WishlistForm wishlist={wishlist} handleUpdateWishlist={handleUpdateWishlist} />
         </div>
         <button 
             id={wishlist.id} 

@@ -11,7 +11,10 @@ function NavBar({
     setCurrentUser
 }) {
 
-    
+function handleLogout(){
+    localStorage.setItem("userId", null)
+    setCurrentUser(null)
+}
 
 return (
     <header> 
@@ -21,7 +24,7 @@ return (
             {currentUser ? (
                 <>
                     <li><Link to="/wishlist"> Wishlist </Link></li>
-                    <li><Link onClick={() => setCurrentUser(null)}>Logout</ Link></li>
+                    <li><Link onClick={handleLogout}>Logout</ Link></li>
                 </>
             ) : (
                 <>

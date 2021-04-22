@@ -26,6 +26,7 @@ function Login ({ setCurrentUser }) {
     })
         .then(r => r.json())
         .then(user => {
+            localStorage.setItem("userId", user.id)
             setCurrentUser(user)
             history.push("/")
         })
@@ -55,15 +56,15 @@ function Login ({ setCurrentUser }) {
     return (
         <div>
           <form onSubmit={handleSubmit} >
-            <h1>Login</h1>
-            <label>Username</label>
+            <h1 className="letter"> Login</h1>
+            <label className="letter"> Username</label>
             <input
               type="text"
               name="username"
               value={formData.username}
               onChange={handleChange}
             />
-            <label>Password</label>
+            <label className="letter" >Password</label>
             <input
               type="password"
               name="password"

@@ -20,6 +20,19 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [wishlists, setWishlists] = useState([])
 
+  const handleUpdateWishlist = (updatedWishlist) => {
+    const newWishList = wishlists.map(wishlist => {
+      if (wishlist.id === updatedWishlist.id) {
+        return updatedWishlist
+      }else{
+        return wishlist
+      }
+    })
+
+    setWishlists(newWishList)
+
+  }
+
   // console.log(currentUser)
 // auto-login 
 // TODO: check if a user has already logged in (look for their token)
@@ -27,9 +40,10 @@ function App() {
 // request => GET /me
 
   useEffect(() => {
-    const token = true
-    if (token) {
-    fetch("http://localhost:3000/me")
+    // const token = true
+    const userId = localStorage.getItem("userId")
+    if (userId) {
+    fetch(`http://localhost:3000/me/${userId}`)
     .then(r => r.json())
     // response => setCurrentUser
     .then(user => setCurrentUser(user))
@@ -68,6 +82,7 @@ function App() {
             currentUser={currentUser}
             wishlists={wishlists}
             setWishlists={setWishlists}
+            handleUpdateWishlist={handleUpdateWishlist}
           />
         </Route>
         <Route exact path="/">

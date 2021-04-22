@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-function WishlistForm({ onUpdateWishlist, wishlist }){
+function WishlistForm({ handleUpdateWishlist, wishlist }){
     const [name, setName] = useState("All")
 
     function handleSubmit(e){
@@ -13,7 +13,7 @@ function WishlistForm({ onUpdateWishlist, wishlist }){
             body: JSON.stringify({name: name})
         })
         .then(r => r.json())
-        .then(updatedWishlist => onUpdateWishlist(updatedWishlist))
+        .then(updatedWishlist => handleUpdateWishlist(updatedWishlist))
         console.log(name)
         // OnUpdateWishlistName(name)
     }
