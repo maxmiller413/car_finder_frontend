@@ -6,19 +6,16 @@
   --mainGrey:rgb(216, 214, 214);
   --mainYellow:#e3b505;
 }
-
 .App {
   color: var(--color);
   background-color: var(--background);
   min-height: 100vh;
 }
-
 .App.light {
   --color: var(--black);
   --background: var(--white);
   --primary: var(--mid-turquoise);
 }
-
 body{
   font-family: 'Roboto', sans-serif;
   color: var(--mainBlack);
@@ -31,8 +28,6 @@ body{
   padding: 0.5rem 2rem;
   clip-path: polygon(10% 0, 100% 0, 90% 100%,0 100%);
 }
-
-
 /* navbar */
 .navbar{
   background: var(--mainWhite);
@@ -62,8 +57,6 @@ body{
 .nav-icon:hover{
   color:var(--mainBlue);
 }
-
-
 /* header */
 .header{
   clip-path: polygon(0 0,100% 0,100% 95%,50% 100%,0 95%);
@@ -92,8 +85,6 @@ body{
     transform: scale(1);
   }
 }
-
-
 .title-heading{
   background: rgba(0,0,0,0,4);
   border-left: 0.3rem solid var(--mainBlue);
@@ -115,8 +106,6 @@ body{
   color: var(--mainBlue);
   opacity: 0.6;
 }
-  
-
 /* skill */
 .skills-icon{
   font-size:3rem;
@@ -132,36 +121,30 @@ body{
   background: var(--mainBlue);
   margin: 1rem auto;
 }
-
 /* Card */
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 }
-
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
 }
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
 }
-
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
   border-radius: 5px 5px 0 0;
   height: 300px;
 }
-
 .carCollection {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -192,7 +175,6 @@ img {
   padding: 60px 32px;
   background: rgba(255, 255, 255, 0.04); 
   box-shadow: -1px 4px 28px 0px rgba(0,0,0,0,7)
-
 }
 .content header{
   color: white;
@@ -218,25 +200,22 @@ img {
   font-size: 16px;
   font-family: 'Poppins',sans-serif;
 }
-
 /* toogle  */
 /* The switch - the box around the slider */
-.switch {
+/* .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-}
-
+} */
 /* Hide default HTML checkbox */
-.switch input {
+/* .switch input {
   opacity: 0;
   width: 0;
   height: 0;
-}
-
+} */
 /* The slider */
-.slider {
+/* .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -246,9 +225,8 @@ img {
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
-}
-
-.slider:before {
+} */
+/* .slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -258,37 +236,30 @@ img {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
-}
-
-input:checked + .slider {
+} */
+/* input:checked + .slider {
   background-color: #2196F3;
-}
-
-input:focus + .slider {
+} */
+/* input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
+} */
+/* input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-
+} */
 /* Rounded sliders */
-.slider.round {
+/* .slider.round {
   border-radius: 34px;
 }
-
 .slider.round:before {
   border-radius: 50%;
-}
-
+} */
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
   overflow: hidden;
 }
-
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
@@ -298,33 +269,27 @@ input:checked + .slider:before {
   text-decoration: none;
   font-size: 17px;
 }
-
 /* Change the color of links on hover */
-.topnav a:hover {
+/* .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
-
+} */
 /* Add a color to the active/current link */
-.topnav a.active {
+/* .topnav a.active {
   background-color: #4CAF50;
   color: white;
-}
-
+} */
 /* NAVBAR */
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(108, 182, 238);
 }
-
 li {
   float: left;
 }
-
 li a {
   display: block;
   color: white;
@@ -332,14 +297,70 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #111;
+  background-color: rgb(238, 231, 14);
 }
-
 .navbar-home{
   display: flex;
   justify-content: center;
+}
+/* dark */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+* {
+	box-sizing: border-box;
+}
+body. {
+	background-color: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	transition: background 0.2s linear;
+} 
+body.dark {
+	background: #292C35;
+}
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+.fa-moon {
+	color: #f1c40f;
+}
+.fa-sun {
+	color: #f39c12;
+}
+/* letter color */
+.letter{
+  color: rgb(94, 94, 36);
 }
 /* REM values to target root element 1REM = 16px */ 

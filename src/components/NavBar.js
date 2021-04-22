@@ -15,7 +15,7 @@ function NavBar({
 
 return (
     <header> 
-        <h1> {title} </h1> 
+        <h1 className="letter"> {title} </h1> 
         <ul className="navbar-home">
             <li><Link to="/"> Home </Link></li>
             {currentUser ? (
@@ -30,10 +30,10 @@ return (
                 </>
             )}
         </ul>
-        <div>
+        {/* <div>
             <DarkMode isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode}>
             </DarkMode>
-        </div>
+        </div> */}
     </header>
 )}
 

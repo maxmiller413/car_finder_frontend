@@ -12,4 +12,10 @@ function DarkMode ({onToggleDarkMode, isDarkMode}){
     )
 }
 
+const chk = document.getElementById('chk')
+
+chk.addEventListener('change', () => {
+    document.body.classList.toggle('dark')
+})
+
 export default DarkMode

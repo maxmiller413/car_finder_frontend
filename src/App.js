@@ -73,11 +73,11 @@ function App() {
         <Route exact path="/">
             {currentUser ? 
               (<> 
-                <h1> Welcome, {currentUser.username} </h1>
+                <h1 className="letter"> Welcome, {currentUser.username} </h1>
                 <CarCollection cars={cars} /> 
               </>) 
               : 
-              (<h1> Please Login or SignUp </h1>)}
+              (<h1 className="letter"> Please Login or SignUp </h1>)}
         </Route>
       </Switch>
       {/* <WishlistItem /> */}
