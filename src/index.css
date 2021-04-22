@@ -310,7 +310,7 @@ li a:hover {
 * {
 	box-sizing: border-box;
 }
-body. {
+.body {
 	background-color: #fafafa;
 	display: flex;
 	align-items: center;
