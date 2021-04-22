@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from "react"
 import WishlistItem from "./WishlistItem"
 
+
 function WishlistCollection({ wishlists, setWishlists, currentUser}){
+
+    const [updateWishlist, setUpdateWishlist] = useState("All")
 
     useEffect(() => {
         fetch(`http://localhost:3000/users/${currentUser.id}`)
@@ -26,9 +29,14 @@ function WishlistCollection({ wishlists, setWishlists, currentUser}){
             />
         )
     )
+
     
     return(
-        <div> {wishlistsArr} </div>
+        <>
+
+            <div> {wishlistsArr} </div>
+            
+        </>
     )
 }
 
