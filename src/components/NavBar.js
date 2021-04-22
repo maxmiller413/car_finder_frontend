@@ -31,8 +31,6 @@ return (
             )}
         </ul>
         <div>
-            
-        
             <DarkMode isDarkMode={isDarkMode} onToggleDarkMode={onToggleDarkMode}>
             </DarkMode>
         </div>
