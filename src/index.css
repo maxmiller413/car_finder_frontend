@@ -145,7 +145,7 @@ img {
   border-radius: 5px 5px 0 0;
   height: 300px;
 }
-.carCollection {
+.carCollection, .wishcollection {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;

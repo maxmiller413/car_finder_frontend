@@ -12,8 +12,9 @@ function NavBar({
 }) {
 
 function handleLogout(){
-    localStorage.setItem("userId", null)
-    setCurrentUser(null)
+    const userId = localStorage.setItem("userId", null)
+    setCurrentUser(userId)
+    
 }
 
 return (
@@ -24,7 +25,7 @@ return (
             {currentUser ? (
                 <>
                     <li><Link to="/wishlist"> Wishlist </Link></li>
-                    <li><Link onClick={handleLogout}>Logout</ Link></li>
+                    <li><Link to="/logout" onClick={handleLogout}>Logout</ Link></li>
                 </>
             ) : (
                 <>

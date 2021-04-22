@@ -35,7 +35,7 @@ function WishlistCollection({ wishlists, setWishlists, currentUser, handleUpdate
     return(
         <>
 
-            <div> {wishlistsArr} </div>
+            <div className="wishcollection"> {wishlistsArr} </div>
             
         </>
     )

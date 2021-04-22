@@ -28,9 +28,7 @@ function App() {
         return wishlist
       }
     })
-
     setWishlists(newWishList)
-
   }
 
 
@@ -56,7 +54,6 @@ function App() {
     // response => setCurrentUser
     .then(user => setCurrentUser(user))
     }
-    
   }, [])
 
   useEffect(() => {
@@ -66,7 +63,7 @@ function App() {
       .then((r) => r.json())
       .then((data) => setWishlists(data.wishlists))
     } 
-}, [])
+  }, [])
 
   useEffect(() => {
     fetch(cars_url)
@@ -86,6 +83,7 @@ function App() {
         onToggleDarkMode={handleToggleDarkMode}
         currentUser={currentUser}
         setCurrentUser={setCurrentUser}
+        setWishlists={setWishlists}
       />
       <Switch>
         <Route exact path="/signup">
