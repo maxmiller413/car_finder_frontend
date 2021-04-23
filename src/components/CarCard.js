@@ -30,7 +30,7 @@ const handleAddWishlist = (id) => {
 
   return (
     <div className="card">
-      <img src={image} alt={make} />
+      <img className="image_card" src={image} alt={make} />
       <div className="container">
         <h4><b>{make} {model}</b></h4>
         <p>Year: {year} </p>

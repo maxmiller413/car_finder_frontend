@@ -363,4 +363,10 @@ body.dark {
 .letter{
   color: rgb(94, 94, 36);
 }
+
+.image_card{
+  object-fit: cover
+  
+}
+
 /* REM values to target root element 1REM = 16px */ 

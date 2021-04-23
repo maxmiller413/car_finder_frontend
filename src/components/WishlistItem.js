@@ -31,7 +31,7 @@ function WishlistItem({ wishlist, onDeleteWishlistItem, handleUpdateWishlist }) 
         
     <div className="card" id={wishlist.id}>
         <p>Wishlist Category: {wishlist.name}</p>
-        <img src={wishlist.car.image} alt={wishlist.car.model} />
+        <img className="image_card" src={wishlist.car.image} alt={wishlist.car.model} />
         <div className="container">
             <h4><b>{wishlist.car.make} - {wishlist.car.model}</b></h4>
             <p>Year: {wishlist.car.year} </p>
