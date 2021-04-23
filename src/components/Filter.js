@@ -28,6 +28,7 @@ function Filter({
                     <option value="Convertible" > Convertible </option>
                     <option value="Sedan" > Sedan </option>
                     <option value="SUV" > SUV </option>
+                    <option value="Coupe" > Coupe </option>
                     
                 </select>
                 <label className="white">Make</label>
@@ -42,6 +43,10 @@ function Filter({
                     <option value="BMW" > BMW </option>
                     <option value="Mercedes-Benz" > Mercedes-Benz </option>
                     <option value="Porsche" > Porsche </option>
+                    <option value="Infiniti" > Infiniti </option>
+                    <option value="Volvo" > Volvo </option>
+                    <option value="Bentley" > Bentley </option>
+                    <option value="Jaguar" > Jaguar </option>
                 </select>
                 <label className="white">Model</label>
                 <select
@@ -71,6 +76,17 @@ function Filter({
                     <option value="X2" > X2 </option>
                     <option value="8 series" > 8 series </option>
                     <option value="7 series" > 7 series </option>
+
+                    <option value="Q50" > Q50 </option>
+                    <option value="QX50" > QX50 </option>
+                    <option value="Q60" > Q60 </option>
+                    <option value="XC90 T8" > XC90 T8 </option>
+                    <option value="Bentayga" > Bentayga </option>
+                    <option value="Continental GT" > Continental GT </option>
+                    <option value="Mulsanne" > Mulsanne </option>
+                    <option value="X6" > X6 </option>
+                    <option value="GLE Coupe" > GLE Coupe </option>
+                    <option value="F Pace" > F Pace </option>
                     </select>
                     <label className="white">Max Price</label>
                     <select
