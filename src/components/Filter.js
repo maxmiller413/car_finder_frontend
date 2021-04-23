@@ -16,8 +16,9 @@ function Filter({
     return(
         <div className="bg-img">
             <div className="content">
-                <header>Vehicle Type</header>
+                <header>Vehicle Filters</header>
                 <div className="text-left">
+                <label className="white">Type</label><br></br>
                 <select
                     name="vehicle_type"
                     id="vehicle_type"
@@ -30,8 +31,8 @@ function Filter({
                     <option value="SUV" > SUV </option>
                     <option value="Coupe" > Coupe </option>
                     
-                </select>
-                <label className="white">Make</label>
+                </select><br></br><br></br>
+                <label className="white">Make</label><br></br>
                 <select
                     name="make"
                     id="make"
@@ -47,8 +48,8 @@ function Filter({
                     <option value="Volvo" > Volvo </option>
                     <option value="Bentley" > Bentley </option>
                     <option value="Jaguar" > Jaguar </option>
-                </select>
-                <label className="white">Model</label>
+                </select><br></br><br></br>
+                <label className="white">Model</label><br></br>
                 <select
                     name="make"
                     id="make"
@@ -87,8 +88,8 @@ function Filter({
                     <option value="X6" > X6 </option>
                     <option value="GLE Coupe" > GLE Coupe </option>
                     <option value="F Pace" > F Pace </option>
-                    </select>
-                    <label className="white">Max Price</label>
+                    </select><br></br><br></br>
+                    <label className="white">Max Price</label><br></br>
                     <select
                         name="max price"
                         id="max price"
@@ -120,8 +121,8 @@ function Filter({
                         <option value="140000" > 140000 </option>
                         <option value="150000" > 150000 </option>
 
-                    </select>
-                    <label className="white">Average Vehicle Rating</label>
+                    </select><br></br><br></br>
+                    <label className="white">Average Vehicle Rating</label><br></br>
                     <select
                         name="average-vehicle-rating"
                         id="average-vehicle-rating"
