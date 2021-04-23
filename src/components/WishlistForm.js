@@ -20,7 +20,7 @@ function WishlistForm({ handleUpdateWishlist, wishlist }){
 
     return(
         <form onSubmit={handleSubmit} className="form" autoComplete="off" >
-            <h3>Update Wishlist Category</h3>
+            <h6>Update Wishlist Category</h6>
             <select
                 // name="wishlist_name"
                 // id="wishlistname"
@@ -33,7 +33,7 @@ function WishlistForm({ handleUpdateWishlist, wishlist }){
                 <option value="Luxury" > Luxury </option>
                 <option value="Upgrading" > Upgrading </option>
             </select>
-            <button type="submit">Update </button>
+            <button className="update_button" type="submit">Update </button>
         </form>
     )
 }

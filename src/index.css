@@ -143,12 +143,13 @@ body{
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
   border-radius: 5px 5px 0 0;
-  height: 250px;
+  height: 240px;
 }
 .carCollection, .wishcollection {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+  padding: 100px
 }
 /* filter */
 .bg-img{
@@ -367,6 +368,56 @@ body.dark {
 .image_card{
   object-fit: cover
   
+}
+
+.button {
+  background-color: var(--mainBlue);/* Green */
+  border: none;
+  color: white;
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+.update_button{
+  background-color: #03b470ec;
+  border: none;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 3px;
+
+}
+
+.delete_button{
+  background-color: #f11212ec;
+  border: none;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 5px;
+
+}
+
+.wishlist_category {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 32px;
 }
 
 /* REM values to target root element 1REM = 16px */ 

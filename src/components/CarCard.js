@@ -36,8 +36,8 @@ const handleAddWishlist = (id) => {
         <p>Year: {year} </p>
         <p>Price: ${price}</p>
         <p>Average Rating: {average_vehicle_rating}</p>
-        <button id={id} onClick={(e) => handleAddWishlist(e.target.id)}>
-        ☆ wishlist
+        <button className="button" id={id} onClick={(e) => handleAddWishlist(e.target.id)}>
+        ☆ Add Wishlist
         </button>
       </div>
     </div>

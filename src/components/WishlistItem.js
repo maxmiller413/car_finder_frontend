@@ -30,7 +30,10 @@ function WishlistItem({ wishlist, onDeleteWishlistItem, handleUpdateWishlist }) 
     return(
         
     <div className="card" id={wishlist.id}>
-        <p>Wishlist Category: {wishlist.name}</p>
+        <p>Wishlist Category: </p>
+        <p className="wishlist_category">  
+            {wishlist.name}
+        </p>
         <img className="image_card" src={wishlist.car.image} alt={wishlist.car.model} />
         <div className="container">
             <h4><b>{wishlist.car.make} - {wishlist.car.model}</b></h4>
@@ -43,7 +46,8 @@ function WishlistItem({ wishlist, onDeleteWishlistItem, handleUpdateWishlist }) 
         </div>
         <button 
             id={wishlist.id} 
-            onClick={handleDeleteButton} 
+            onClick={handleDeleteButton}
+            className="button" 
         > 
             Delete from Wishlist
         </button>
