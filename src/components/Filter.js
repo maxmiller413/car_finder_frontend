@@ -32,6 +32,7 @@ function Filter({
                     <option value="Coupe" > Coupe </option>
                     
                 </select><br></br><br></br>
+
                 <label className="white">Make</label><br></br>
                 <select
                     name="make"
@@ -49,6 +50,7 @@ function Filter({
                     <option value="Bentley" > Bentley </option>
                     <option value="Jaguar" > Jaguar </option>
                 </select><br></br><br></br>
+                
                 <label className="white">Model</label><br></br>
                 <select
                     name="make"
