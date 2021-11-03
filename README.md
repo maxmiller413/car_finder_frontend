@@ -1,4 +1,31 @@
-# Getting Started with Create React App
+# car_finder
+
+This app will help a consumer at the beginning of their car buying process compare car brands and models. 
+
+### [Frontend](https://github.com/maxmiller413/car_finder_frontend) | [Backend](https://github.com/maxmiller413/car_finder_backend)
+
+## Website Steps
+
+  1.    Sign Up/Log In 
+  2.    Chose from available filters and search
+  3.    View car photo, price, and other information
+
+## Technologies/APIs Used
+
+**Client:** React.js, JavaScript, Bootstrap CSS Framework
+
+**Server:** Ruby, Ruby on Rails, PostgreSQL
+
+## Support
+
+Please give a ⭐️ if you like this project, thank you!
+
+## Author
+
+- Github:  [@maxmiller413](https://github.com/maxmiller413)
+- LinkedIn:[@Max Miller](https://www.linkedin.com/in/max-miller-a4589830/)
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +94,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
