@@ -20,10 +20,16 @@ This app will help a consumer at the beginning of their car buying process compa
 
 Please give a ⭐️ if you like this project, thank you!
 
-## Author
+## Authors
 
+Max Miller
 - Github:  [@maxmiller413](https://github.com/maxmiller413)
 - LinkedIn:[@Max Miller](https://www.linkedin.com/in/max-miller-a4589830/)
+
+Karris Black
+- Github:  [@KBlackz](https://github.com/KBlackz)
+- LinkedIn:[@Karris Black](https://www.linkedin.com/in/karris-black-a96523169/)
+
 
 <!-- # Getting Started with Create React App
 
